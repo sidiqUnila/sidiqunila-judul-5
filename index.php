@@ -16,7 +16,7 @@ try {
     $pdo = $db->getConnection();
     $dbConnected = true;
 
-    $stmt = $pdo->query('SELECT id, npm, nama, program_studi, angkatan, email, created_at FROM mahasiswa ORDER BY id DESC');
+    $stmt = $pdo->query('SELECT id, nim, nama, program_studi, angkatan, email, created_at FROM mahasiswa ORDER BY id DESC');
     $daftar_mahasiswa = $stmt->fetchAll();
 } catch (Exception $e) {
     $errorMessage = $e->getMessage();
@@ -116,7 +116,7 @@ try {
                             <tr>
                                 <th>ID</th>
                                 <th>Foto</th>
-                                <th>npm</th>
+                                <th>NIM</th>
                                 <th>Nama Lengkap</th>
                                 <th>Program Studi</th>
                                 <th>Angkatan</th>
@@ -138,7 +138,7 @@ try {
                                         <td>
                                             <img src="img/avatar-default.svg" alt="Foto <?= htmlspecialchars($mhs['nama']) ?>" class="avatar-img" width="36" height="36">
                                         </td>
-                                        <td><strong><?= htmlspecialchars($mhs['npm']) ?></strong></td>
+                                        <td><strong><?= htmlspecialchars($mhs['nim']) ?></strong></td>
                                         <td><?= htmlspecialchars($mhs['nama']) ?></td>
                                         <td><span class="badge"><?= htmlspecialchars($mhs['program_studi']) ?></span></td>
                                         <td><?= htmlspecialchars($mhs['angkatan']) ?></td>
@@ -207,7 +207,7 @@ try {
                 <div style="margin-top: 24px;">
                     <h3>Contoh Payload JSON (POST / PUT):</h3>
                     <pre class="code-block">{
-  "npm": "240101099",
+  "nim": "240101099",
   "nama": "Farhan Alamsyah",
   "program_studi": "Teknik Informatika",
   "angkatan": 2024,
