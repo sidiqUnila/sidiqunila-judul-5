@@ -11,7 +11,7 @@ Accept: application/json
 ###
 
 ### 2. GET Mahasiswa dengan Filter Pencarian
-GET http://localhost:8000/api/mahasiswa.php?search=Informatika
+GET http://localhost:8080/api/mahasiswa.php?search=Informatika
 Accept: application/json
 
 ###
@@ -23,27 +23,27 @@ Accept: application/json
 ###
 
 ### 4. POST Tambah Mahasiswa Baru
-POST http://localhost:8000/api/mahasiswa.php
+POST http://localhost:8080/api/mahasiswa.php
 Content-Type: application/json
 Accept: application/json
 
 {
-  "nim": "240101088",
-  "nama": "Rizky Ramadhan",
+  "nim": "2315061118",
+  "nama": "M. Sidiq Firdaus",
   "program_studi": "Teknik Informatika",
   "angkatan": 2024,
-  "email": "rizky.ramadhan@example.com"
+  "email": "firdaus@example.com"
 }
 
 ###
 
 ### 5. PUT Perbarui Data Mahasiswa Berdasarkan ID
-PUT http://localhost:8000/api/mahasiswa.php?id=1
+PUT http://localhost:8080/api/mahasiswa.php?id=1
 Content-Type: application/json
 Accept: application/json
 
 {
-  "nim": "230101001",
+  "nim": "2301011111",
   "nama": "Ahmad Fauzi, S.Kom.",
   "program_studi": "Teknik Informatika",
   "angkatan": 2023,
@@ -53,6 +53,6 @@ Accept: application/json
 ###
 
 ### 6. DELETE Hapus Data Mahasiswa Berdasarkan ID
-DELETE http://localhost:8000/api/mahasiswa.php?id=4
+DELETE http://localhost:8080/api/mahasiswa.php?id=4
 Accept: application/json
 
